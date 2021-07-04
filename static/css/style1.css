@@ -1,0 +1,20 @@
+.team .content .box .imgbx:hover{
+    transform: translateY(20px);
+
+}
+.team .content .box .imgbx::before{
+    display: block;
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+    
+}
+.team .content .box .imgbx:hover:before{
+    opacity: 2;
+}
+
+.team .content .box .imgbx .info:hover{
+        opacity: 1;
+        margin-top:20px; 
+        transform: translateY(0px);
+}
