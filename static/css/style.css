@@ -259,10 +259,10 @@ padding: 15px 0 5px;
 color: #fff;
  }
  .testimonials .content{
-    display: inline-block;
-    /* justify-content: center;
+    display: flex;
+    /* justify-content: center; 
     flex-wrap: wrap;
-    flex-direction: row; */
+    flex-direction: row;  */
     margin-top: 40px;
  }
     
