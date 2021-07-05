@@ -1,32 +1,11 @@
+{% extends 'base.html' %}
+
 {% load static %}
+
 {% static "img" as baseUrl %}
-<!DOCTYPE html>
-<html lang="en">
+{% block content %} 
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design HOME</title>
-    <link rel="stylesheet" href="{%static '/css/style.css' %}">
-    <link rel="stylesheet" href="{%static '/css/style1.css' %}">
-</head>
-
-<body>
-    <header class="header">
-        <a href="#" class="logo">localBoys<span>.</span></a>
-        <div class="menuToggle" onclick="toggleMenu()"></div>
-        <ul class="navigation">
-            <li><a href="#banner" onclick="toggleMenu()">Home</a></li>
-            <li><a href="#about" onclick="toggleMenu()">About</a></li>
-            <li><a href="#shop" onclick="toggleMenu()">Shop</a></li>
-            <li><a href="#team" onclick="toggleMenu()">Team</a></li>
-            <li><a href="#testimonials" onclick="toggleMenu()">Testimonials</a></li>
-            <li><a href="accounts/register" onclick="toggleMenu()">Register</a></li>
-            <li><a href="accounts/login" onclick="toggleMenu()">Login</a></li>
-        </ul>
-    </header>
-    <section class="banner" id="banner" style="background-image:  url('{% static "/img/bg1.jpg"%}')">
+    <section class="banner" id="banner" style="background-image:  url('{% static "/img/bg1.jpg"%}');">
         <div class="content">
             <h2>Always Choose Good</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quisquam sunt temporibus soluta. Culpa ad
@@ -115,7 +94,7 @@
             </div>
 
             <div class="title">
-                <a href="#" class="btn">View all</a>
+                <a href="shop" class="btn">View all</a>
             </div>
     </section>
     <section class="team" id="team">
@@ -209,28 +188,6 @@
 
 
     </section>
-    <section class="contact" id="contact" style=" background-image: url('{% static "/img/contact.jpg"%}')">
-        <div class="title  white">
-            <h2 class="titletext"><span>C</span>ontanct Us</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="contactform">
-            <h3>Send Message</h3>
-            <div class="inputbox">
-                <input type="text" placeholder="Name">
-            </div>
-            <div class="inputbox">
-                <input type="text" placeholder="Email">
-            </div>
-            <div class="inputbox">
-                <textarea placeholder="Name"></textarea>
-            </div>
-            <div class="title">
-                <a href="#" class="btn">Send</a>
-            </div>
-        </div>
-    </section>
-    <script src="{%static 'main.js' %}"></script>
-</body>
+   
+{% endblock content %} 
 
-</html>
