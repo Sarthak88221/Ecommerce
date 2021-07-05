@@ -26,7 +26,7 @@
             <li><a href="accounts/login" onclick="toggleMenu()">Login</a></li>
         </ul>
     </header>
-    <section class="banner" id="banner" style="background-image: url('{%static "img/bg1.jpg"%}')">
+    <section class="banner" id="banner" style="background-image:  url('{% static "/img/bg1.jpg"%}')">
         <div class="content">
             <h2>Always Choose Good</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quisquam sunt temporibus soluta. Culpa ad
@@ -166,26 +166,50 @@
             </div>
         </div>
     </section>
-    <section class="testimonials" id="testimonials" style ="background-image: url('{%static "img/test2bg.jpg"%}')">
+    <section class="testimonials" id="testimonials" style ="background-image: url('{% static "/img/test2bg.jpg"%}')">
         <div class="title white">
             <h2 class="titletext">What <span>O</span>thers say about us</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
         </div>
-        {% for tess in tests %}
-         <div class="content">
+        <div class="content">
             <div class="box">
                 <div class="imgbx">
-                    <img src="{{tess.img.url}} " alt="">
+                    <img src="{%static '/img/test1.jpg' %}" alt="">
                 </div>
                 <div class="text">
-                    <p>{{tess.text}}</p>
-                    <h3> {{tess.name}}</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure esse illum odit excepturi, sint
+                        perspiciatis earum unde accusantium eos iusto laborum, iste deserunt itaque aliquam adipisci
+                        aliquid! Minus</p>
+                    <h3> Name blehh blehhh</h3>
                 </div>
             </div>
-         </div>
-        {% endfor %}
+            <div class="box">
+                <div class="imgbx">
+                    <img src="{%static '/img/test2.jpg' %}" alt="">
+                </div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure esse illum odit excepturi, sint
+                        perspiciatis earum unde accusantium eos iusto laborum, iste deserunt itaque aliquam adipisci
+                        aliquid! Minus</p>
+                    <h3> Name blehh blehhh</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgbx">
+                    <img src="{%static '/img/test3.jpg' %}" alt="">
+                </div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure esse illum odit excepturi, sint
+                        perspiciatis earum unde accusantium eos iusto laborum, iste deserunt itaque aliquam adipisci
+                        aliquid! Minus</p>
+                    <h3> Name blehh blehhh</h3>
+                </div>
+            </div>
+        </div>
+
+
     </section>
-    <section class="contact" id="contact" style=" background-image: url('{%static "img/contact.jpg"%}')">
+    <section class="contact" id="contact" style=" background-image: url('{% static "/img/contact.jpg"%}')">
         <div class="title  white">
             <h2 class="titletext"><span>C</span>ontanct Us</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
