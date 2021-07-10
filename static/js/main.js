@@ -8,3 +8,4 @@ function toggleMenu(){
     menuToggle.classList.toggle('active');
     navigation.classList.toggle('active');
 }
+

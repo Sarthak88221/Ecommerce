@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 :root{
     --theme: #a71222
 }
@@ -6,8 +7,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins',sans-serif,'Open Sans';
     scroll-behavior: smooth;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all .2s cubic-bezier(.37,1.14,.26,1.24);
+
+
 }
 
 
@@ -123,13 +129,13 @@ color: var(--theme);
 section{
     padding: 100px;
 }
-.row{
+.rows{
     position: relative;
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.row .col50{
+.rows .col50{
     position: relative;
     width: 48%;
 }
@@ -143,13 +149,13 @@ section{
     font-weight: 700;
     font-size: 1.5em;
 }
-.row .col50 .imgbx{
+.rows .col50 .imgbx{
 position: relative;
 width: 100%;
 /* height: 300px; */
 min-height: 300px;
 }
-.row .col50 .imgbx img{
+.rows .col50 .imgbx img{
     position: absolute;
     top: 0;
     left: 0;
@@ -307,49 +313,170 @@ font-style: italic;
      font-size: 1em;
      color: var(--theme);
      letter-spacing: 1px;
- }
+    }
+    /*=================SHOP===================== */
+    /*=========================================== */
+    .heading{
+        padding-top: 7rem;
+        width: 95%;
+        border-bottom: .2rem solid #111;
+        margin:0 auto;
+        
+    }
+    
+    .heading span{
+        font-size: 2rem;
+        padding:1rem 6rem;
+        color:#fff;
+        background:var(--theme);
+        border-top-right-radius: 3rem;
+        display: inline-block;
+    }
 
-
- /* ================Contact=============== */
- /* ====================================== */
- .contact{
-     background:url("/mysite/static/img/contact.jpg");
-     background-size: cover;
- }
- .contactform{
-     padding: 75px 50px;
-     justify-content: space-between;
-     text-align: center;
-     align-items: center;
-     background: rgba(255, 255, 255, 0.19);
-     box-shadow: 0 25px 45px rgba(0,0,0,0.1);
-     border: 1px solid rgba(255, 255, 255, 0.25);
-     /* max-width: 500px; */
-     margin-top: 50px;
- }
- .contactform h3{
-     color: #111;
-     font-size: 2.2em;
-     margin-bottom: 20px;
-     font-weight: 600;
- }
- .contactform .inputbox{
-     position: relative;
-     width: 100%;
-     margin-bottom: 20px;
- }
-.contactform .inputbox input,
-.contactform .inputbox textarea{
-    width: 600px;
-    border: 1px solid #555;
-    padding: 10px;
-    color: #111;
-    outline: none;
-    font-size: 16px;
-    font-weight: 300;
-    resize: none;
+    
+h2 {
+	color: #000;
+	font-size: 26px;
+	font-weight: 300;
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+	margin: 30px 0 80px;
 }
-
+h2 b {
+	color: #ffc000;
+}
+h2::after {
+	content: "";
+	width: 100px;
+	position: absolute;
+	margin: 0 auto;
+	height: 4px;
+	background: rgba(0, 0, 0, 0.2);
+	left: 0;
+	right: 0;
+	bottom: -20px;
+}
+.carousel {
+	margin: 50px auto;
+	padding: 0 70px;
+}
+.carousel .item {
+	min-height: 330px;
+    text-align: center;
+	overflow: hidden;
+}
+.carousel .item .img-box {
+	height: 160px;
+	width: 100%;
+	position: relative;
+}
+.carousel .item img {	
+	max-width: 100%;
+	max-height: 100%;
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+}
+.carousel .item h4 {
+	font-size: 18px;
+	margin: 10px 0;
+}
+.carousel .item .btn {
+	color: #333;
+    border-radius: 0;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: none;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    margin-top: 5px;
+    line-height: 16px;
+}
+.carousel .item .btn:hover, .carousel .item .btn:focus {
+	color: #fff;
+	background: #000;
+	border-color: #000;
+	box-shadow: none;
+}
+.carousel .item .btn i {
+	font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.carousel .thumb-wrapper {
+	text-align: center;
+}
+.carousel .thumb-content {
+	padding: 15px;
+}
+.carousel .carousel-control {
+	height: 100px;
+    width: 40px;
+    background: none;
+    margin: auto 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+.carousel .carousel-control i {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    margin: -16px 0 0 0;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+    font-weight: bold;
+}
+.carousel .item-price {
+	font-size: 13px;
+	padding: 2px 0;
+}
+.carousel .item-price strike {
+	color: #999;
+    text-decoration: line-through;
+	margin-right: 5px;
+}
+.carousel .item-price span {
+	color: #86bd57;
+	font-size: 110%;
+}
+.carousel .carousel-control.left i {
+	margin-left: -3px;
+}
+.carousel .carousel-control.left i {
+	margin-right: -3px;
+}
+.carousel .carousel-indicators {
+	bottom: -50px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+	width: 10px;
+	height: 10px;
+	margin: 4px;
+	border-radius: 50%;
+	border-color: transparent;
+}
+.carousel-indicators li {	
+	background: rgba(0, 0, 0, 0.2);
+}
+.carousel-indicators li.active {	
+	background: rgba(0, 0, 0, 0.6);
+}
+.star-rating li {
+	padding: 0;
+}
+.star-rating i {
+	font-size: 14px;
+	color: #ffc000;
+}
+ 
 
 /*===============RESPONSIVE================== */
 /*=========================================== */
@@ -419,14 +546,14 @@ font-style: italic;
     .banner .content p {
         font-size: 0.8em;
     }
-    .row {
+    .rows {
         flex-direction: column;
     }
-    .row .col50 {
+    .rows .col50 {
         position: relative;
         width: 100%;
     }
-    .row .col50 .imgbx {
+    .rows .col50 .imgbx {
         height: 300px;
         margin-top: 20px;
     }
@@ -450,12 +577,6 @@ font-style: italic;
         margin: 10px;
         padding: 20px;
     }
-    .contactform .inputbox input, .contactform .inputbox textarea {
-        width: 200px;
-    }
-    .contactform .inputbox {
-        margin-bottom: 15px;
-    }    
 }
 
 
