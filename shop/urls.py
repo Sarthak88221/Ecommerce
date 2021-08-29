@@ -1,4 +1,4 @@
-from django.contrib import admin
+
 from django.urls import path
 from . import views
 
@@ -10,4 +10,5 @@ urlpatterns = [
     path('search/', views.search, name="Search"),
     path('productview/', views.productview, name="ProductView"),
     path('checkout/', views.checkout, name="Checkout"),
+  
 ]

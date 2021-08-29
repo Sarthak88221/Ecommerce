@@ -17,7 +17,7 @@
 
   <title>Design HOME</title>
 
-  <title>Hello, world!</title>
+  
   
   <link rel="stylesheet" href="{%static '/css/style.css' %}">
   <link rel="stylesheet" href="{%static '/css/style1.css' %}">
@@ -28,28 +28,31 @@
 <body>
   <header class="header">
     <a href="" class="logo">localBoys<span>.</span></a>
-    <div class="menuToggle" onclick="toggleMenu()" style="background-image:  url('{% static " /img/nav.png"%}')"></div>
+    <div class="menuToggle" onclick="toggleMenu()" style="background-image:  url(' {{STATIC_URL}} /img/nav.png')"></div>
     {% block nav %}
 
     <ul class="navigation">
-      <li>{% block nav-shop%}<a href="" onclick="toggleMenu()">Home</a>{% endblock %}</li>
+      <li>{% block nav-shop%}<a href="/" onclick="toggleMenu()">Home</a>{% endblock %}</li>
       <li><a href="#about" onclick="toggleMenu()">About</a></li>
       <li> <a href="shop" onclick="toggleMenu()">Shop</a></li>
       <li><a href="#team" onclick="toggleMenu()">Team</a></li>
       <li><a href="#testimonials" onclick="toggleMenu()">Testimonials</a></li>
       <li><a href="#testimonials" onclick="toggleMenu()">Tracker</a></li>
       <li><a href="#testimonials" onclick="toggleMenu()">Contact Us</a></li>
-      <li><a href="accounts/register" onclick="toggleMenu()">Register</a></li>
-      <li><a href="accounts/login" onclick="toggleMenu()">Login</a></li>
-    </ul>
+      <li><a href="{%url 'register'%}" onclick="toggleMenu()">Register</a></li>
+      {%if user.is_authenticated %}
+
+      <li><a href="{%url 'logout'%}" onclick="toggleMenu()">logout</a></li>
+      {% else %}
+      <li><a href="{%url 'login'%}" onclick="toggleMenu()">Login</a></li>
+      </ul>
+      {% endif %}
     {% endblock %}
 
   </header>
 
 
 
-  {% block content %}
-  {% endblock content %}
   <!-- Optional JavaScript; choose one of the two! -->
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -63,6 +66,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
   <script src="{%static '/js/main.js' %}"></script>
+  
+  {% block content %}
+  {% endblock content %}
 </body>
 
 </html>
