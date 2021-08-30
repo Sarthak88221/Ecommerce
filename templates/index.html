@@ -2,10 +2,10 @@
 
 {% load static %}
 
-{% static "img" as baseUrl %}
+
 {% block content %} 
 
-    <section class="banner" id="banner" style="background-image:  url('{% static "/img/bg1.jpg"%}');">
+    <section class="banner" id="banner" style="background-image: url('{{STATIC_URL}} static/img/bg1.jpg');">
         <div class="content">
             <h2>Always Choose Good</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quisquam sunt temporibus soluta. Culpa ad
@@ -144,7 +144,7 @@
             </div>
         </div>
     </section>
-    <section class="testimonials" id="testimonials" style ="background-image: url('{% static "/img/test2bg.jpg"%}')">
+    <section class="testimonials" id="testimonials" style ="background-image: url( '{{STATIC_URl}} static/img/test2bg.jpg' )">
         <div class="title white">
             <h2 class="titletext">What <span>O</span>thers say about us</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
