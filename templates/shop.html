@@ -9,12 +9,17 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 {% endblock head %}
+{% block title %}
+Shop
+{% endblock title %}
 
 
 {% block stylesheet %}
 {% endblock stylesheet %}
 
-{% block nav-shop %}<a href="shop" onclick="toggleMenu()">Shop</a>{% endblock %}
+{% block nav-shop %}
+<li><a href="/" onclick="toggleMenu()">Home</a></li>
+{% endblock %}
 
 
 
