@@ -29,7 +29,7 @@ class Product(models.Model):
     slug =models.SlugField(max_length=1000, null=True,blank=True)
     price = models.IntegerField(default =0)
     desc = models.CharField(max_length=300)
-    pub_date = models.DateField()
+    pub_date = models.DateField()   
     image = models.ImageField(upload_to="shop/images",default ="")
 
     def __str__(self):
