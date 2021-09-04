@@ -8,6 +8,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!--  -->
+
+  
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -15,7 +18,7 @@
   {% block head %}
   {% endblock head %}
 
-  <title>Design HOME</title>
+  <title>Design | {% block title %}{% endblock %}</title>
 
   
   
@@ -26,17 +29,19 @@
 </head>
 
 <body>
+<div>
   <header class="header">
-    <a href="" class="logo">localBoys<span>.</span></a>
+    <a href="/" class="logo">localBoys<span>.</span></a>
     <div class="menuToggle" onclick="toggleMenu()" style="background-image:  url(' {{STATIC_URL}} /img/nav.png')"></div>
     {% block nav %}
 
     <ul class="navigation">
-      <li>{% block nav-shop%}<a href="/" onclick="toggleMenu()">Home</a>{% endblock %}</li>
+      {% block nav-shop%}{% endblock %}
       <li><a href="#about" onclick="toggleMenu()">About</a></li>
-      <li> <a href="shop" onclick="toggleMenu()">Shop</a></li>
       <li><a href="#team" onclick="toggleMenu()">Team</a></li>
-      <li><a href="#testimonials" onclick="toggleMenu()">Testimonials</a></li>
+      <li> <a href="{%url 'shop'%}" onclick="toggleMenu()">Shop</a></li>
+     
+      <li><a href="{%url 'brand'%}" onclick="toggleMenu()">Brands</a></li>
       <li><a href="#testimonials" onclick="toggleMenu()">Tracker</a></li>
       <li><a href="#testimonials" onclick="toggleMenu()">Contact Us</a></li>
       <li><a href="{%url 'register'%}" onclick="toggleMenu()">Register</a></li>
@@ -50,6 +55,7 @@
     {% endblock %}
 
   </header>
+</div>
 
 
 
@@ -59,6 +65,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+    <!-- MDB -->
+<script
+type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
+></script>
 
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <!--
